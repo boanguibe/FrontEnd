@@ -15,7 +15,11 @@ function calcularOperaciones(){
   let modulo = numero1 % numero2;
     document.querySelector("#resultado1").innerHTML = `
     Al ingresar el numero ${numero1} y numero ${numero2} se obtendra:<br>
-    Suma: ${suma}, Resta: ${resta}, Division: ${division.toFixed(2)}, Multiplicacion: ${multiplicacion}, Modulo: ${modulo}`;
+    ## Suma: ${suma} ##<br>
+    ## Resta: ${resta} ##<br>
+    ## Division: ${division.toFixed(2)} ##<br>
+    ## Multiplicacion: ${multiplicacion} ##<br>
+    ## Modulo: ${modulo} ##`;
 }
 
 document.querySelector("#operaciones").addEventListener("click", calcularOperaciones);

@@ -1,55 +1,17 @@
-// 2.  Cree  una  segunda  función  que  muestre  los  datos  de  Nombre  y  Apellidos  y  solicite  dos 
-// montos  (dos  números  enteros)  para  sueldo  base  actual  y  sueldo  base  promedio  del 
-// semestre anterior, que ingrese el dato de si tiene cargas familiares autorizadas y, si tiene 
-// cargas familiares autorizadas, retorne otro entero que sea el valor que le corresponde según 
-// la tabla siguiente: 
+// 2.  Crear un programa que pida al usuario ingresar la temperatura
+// en grados Celsius y que la transforme a grados Kelvin y Fahrenheit.
 
-function convertirAMayusculas(nombre, apellidos) {
-  // Usamos el método toUpperCase() para convertir a mayúsculas
-  let nombreMayusculas = nombre.toUpperCase();
-  let apellidosMayusculas = apellidos.toUpperCase();
-  let nombreCompleto = `${nombreMayusculas} ${apellidosMayusculas}`
-  // Devolvemos el nombre y apellidos en mayúsculas
-  return nombreCompleto;
+
+// Funcion de calculo de grados
+function transformarGrados(){
+  console.log("hola")
+  let celsius = parseInt(prompt('Ingrese la temperatura: '))
+  let fahrenheit = celsius * 9/5 +32
+  let kelvin = celsius + 273.15
+  document.querySelector('#resultado2').innerHTML = `
+  ${celsius}° Celsius equivalen a:<br>
+  ## ${fahrenheit}° Fahrenheit ##<br>
+  ## ${kelvin}° Kelvin ##`;
 }
 
-function calcularAsignacionFamiliar(sueldoSemestreAnterior, cargasFamiliares) {
-  var monto;
-
-  if (cargasFamiliares == 'si'){
-    if (sueldoSemestreAnterior < 429900) {
-      monto = 16828;
-    } else if (sueldoSemestreAnterior < 627914) {
-      monto = 10327;
-    } else if (sueldoSemestreAnterior < 979331) {
-      monto = 3264;
-    } else {
-      monto = 0;
-    }
-    return monto;
-  } else {
-    return 0;
-  }
- 
-}
-
-
-function calcularBeneficio() {
-  let nombre = prompt("Ingrese su Nombre");
-  let apellidos = prompt('Ingrese sus Apellidos');
-  let nombreCompleto = convertirAMayusculas(nombre, apellidos);
-  let sueldoBaseActual = parseInt(prompt('Ingrese Sueldo Actual:'));
-  let sueldoBasePromedioSemestreAnterior =  parseInt(prompt('Ingrese Sueldo Base Promedio Anterior:'));
-
-  let cargaFamiliar = prompt('¿Tienes Cargas Familiares? Si o No:');
-  let AsignacionFamiliar = calcularAsignacionFamiliar(sueldoBasePromedioSemestreAnterior, cargaFamiliar)
-
-
-  document.querySelector("#resultado2").innerHTML = `
-  Sr. ${nombreCompleto}, usted tiene derecho al monto de $${AsignacionFamiliar}.- 
-  por concepto de asignación familiar x carga según su Sueldo Base promedio 
-  Semestre anterior de $${sueldoBasePromedioSemestreAnterior}.-` ;
-}
-
-document.querySelector("#calculaBeneficio").addEventListener("click", calcularBeneficio);
-
+document.querySelector("#calculaGrados").addEventListener("click", transformarGrados);
