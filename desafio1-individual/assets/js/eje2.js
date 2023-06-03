@@ -11,7 +11,7 @@ function transformarGrados(){
   document.querySelector('#resultado2').innerHTML = `
   ${celsius}° Celsius equivalen a:<br>
   ## ${fahrenheit}° Fahrenheit ##<br>
-  ## ${kelvin}° Kelvin ##`;
+  ## ${kelvin}° Kelvin ## <hr>`;
 }
 
 document.querySelector("#calculaGrados").addEventListener("click", transformarGrados);

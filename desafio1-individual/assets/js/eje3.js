@@ -17,7 +17,7 @@ function calcularAnioMesDia(){
   Los ${dias} dias ingresados equivalen a:<br>
   ## ${Math.floor(anios)} años ##<br>
   ## ${Math.floor(semanas)} semanas ##<br>
-  ## ${dia} días ##`
+  ## ${dia} días ## <hr>`
 }
 
 document.querySelector("#calculaAnioMesDia").addEventListener("click", calcularAnioMesDia);

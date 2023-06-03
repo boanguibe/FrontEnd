@@ -19,7 +19,7 @@ function calcularOperaciones(){
     ## Resta: ${resta} ##<br>
     ## Division: ${division.toFixed(2)} ##<br>
     ## Multiplicacion: ${multiplicacion} ##<br>
-    ## Modulo: ${modulo} ##`;
+    ## Modulo: ${modulo} ## <hr>`;
 }
 
 document.querySelector("#operaciones").addEventListener("click", calcularOperaciones);
