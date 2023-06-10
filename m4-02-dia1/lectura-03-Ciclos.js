@@ -64,7 +64,7 @@ let resultado3_2 = document.getElementById("resulta3-2");
 resultado3_2.innerHTML = `La cantidad de números no múltiplos de cuatro es: ${no_multiplo}`
 
 // Ejercicio guiado: Encontrar elementos en un arreglo
-let estudiante = "Juan  "
+let estudiante = "Juan"
 let cursoDiseno = ["Pedro", "Maria", "Diego", "Juan", "Paola"]
 
 let loEncontramos = false;
